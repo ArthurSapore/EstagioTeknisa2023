@@ -1,13 +1,21 @@
+
 .container{
     text-align: center;
 }
 .body input{
     padding-right: 8px;
     margin-right: 8px;
+    border-color: black;
+    border-radius: 42px;
+    height: 30px;
+    
 }
+
+
 
 .body button{
     padding: 8px 16px;
+    border-radius: 42px;
 }
 
 .footer{
