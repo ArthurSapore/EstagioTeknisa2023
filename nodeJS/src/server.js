@@ -58,6 +58,11 @@ app.get('/retrieveProgrammer/:id', async(req, res)=>{
     }
 })
 
+app.get('/retrieveProgrammer', async(req, res)=>{  
+    const records = await programmer.findAll();
+    res.send(records);
+})
+
 app.delete('/deleteProgrammer', async(req, res)=>{
     try{
       const params = req.body;
@@ -110,6 +115,7 @@ app.put('/updateProgrammer', async(req, res)=>{
     record.python = params.python || record.python;
 
     await record.save();
+    res.send('Programmer updated!');
 
 })
 
