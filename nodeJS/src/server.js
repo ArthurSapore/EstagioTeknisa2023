@@ -44,21 +44,15 @@ app.post('/createProgrammer', async(req, res)=>{
     }
 })
 
-app.get('/retrieveProgrammer', async(req, res)=>{  
+app.get('/retrieveProgrammer/:id', async(req, res)=>{  
     try{
-        const params = req.body;
-        if('id' in params){
-            const record = await programmer.findByPk(params.id);
-            if(record){
-                res.send(record);
-            }else{
-                res.send('No programmer found by Id');
-            }
-            return;
+        const record = await programmer.findByPk(req.params.id);
+        if(record){
+            res.send(record);
+        }else{
+            res.send('No programmer found.');
         }
-        const records = await programmer.findAll();
-        res.send(records);
-
+        return;
     }catch(error){
         res.send(error);
     }
@@ -71,7 +65,6 @@ app.delete('/deleteProgrammer', async(req, res)=>{
         res.send(   'Missing "id" in request body');
         return;
       }
-
       const record = await programmer.findByPk(params.id);
 
       if(!record){
