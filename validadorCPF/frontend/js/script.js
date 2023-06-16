@@ -1,6 +1,8 @@
+
 $(document).ready(function(){
     $('#cpf').inputmask('999.999.999-99')
 });
+
 
 function validaCPF(){
     const cpfFormatado = document.getElementById('cpf').value;
@@ -29,7 +31,8 @@ function validaCPF(){
         mostraResultado(`CPF inválido. ${cpfFormatado}`, 'red');
         return;
     }
-    mostraResultado(`CPF válido. ${cpfFormatado}`, 'green');
+    mostraResultado(`CPF válido: ${cpfFormatado}`, 'green');
+    postCpf(cpf);
 
 }
 
@@ -65,4 +68,22 @@ function mostraResultado(texto, cor){
 
 function verificaDigitosRepetidos(cpf){
     return cpf.split('').every((d)=> d === cpf[0]);
+}
+
+async function postCpf(cpf){
+    await axios.post('http://localhost:5000/createProgrammerCpf', cpf)
+    .then(function (response) {
+        mostraResultado(`CPF cadastrado com sucesso.`, 'green');
+        return response;
+    })
+    .catch(function (error) {
+        if (error.response) {
+        throw error.response
+        } else if (error.request) {
+        console.log(error.request);
+        } else {
+        console.log('Erro', error.message);
+        }
+        mostraResultado(`CPF não foi cadastrado.`, 'red');
+    });
 }
