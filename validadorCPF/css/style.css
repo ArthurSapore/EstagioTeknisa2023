@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    
+}
+.cpfValidator{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    width: 50vh;
+    border-radius: 5%;
+    box-shadow: 5px 5px 10px #0076a3
+}
+
+.header{
+    margin: 25px;
+}
+
+.header h3{
+    font-family: cursive;
+    color: #835afd;
+    text-align: center;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+}
+
+.body input{
+    height: 40px;
+    border-radius: 8px;
+    padding: 0 16px;
+    background: #FFF;
+    border: 1px solid #a8a8b3;
+    width: 200px;
+    margin: 5px;
+    text-align: center;
+    
+}
+
+.body button{
+    height: 40px;
+    width: 210px;
+    border-radius: 30px;
+    font-weight: 500;
+    background-color: #835afd;
+    color: #FFF;
+    padding: 0 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 0;
+}
+
+#separator{
+    font-size: 14px;    
+    color: #a8a8b3;
+    margin: 32px 50px;
+    display: none;
+    align-items: center;
+}
+#separator::before{
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #a8a8b3;
+    margin-right: 16px;
+}
+
+#separator::after{
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #a8a8b3;
+    margin-left: 16px;
+}
+
+.footer{
+    margin: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.developer{
+    display: flex;
+    margin: 15px;
+}
