@@ -63,6 +63,10 @@ function mostraResultado(texto, cor){
     separator.style.display = "flex";
     span.innerHTML = texto;
     span.style.color = cor;
+    if(cor="green"){
+        const span = document.getElementById('prosseguir');
+        span.innerHTML = `<a href="register.html">Prosseguir com o cadastro</a>`;
+    }
 
 }
 

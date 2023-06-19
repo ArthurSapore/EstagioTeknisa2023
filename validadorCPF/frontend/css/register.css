@@ -37,15 +37,31 @@
     flex-direction: column;
 }
 
-.body input{
+.languageKnowledge{
+    display: flex;
+    margin: 20px 0px;
+}
+
+.languageKnowledge input{   
+    padding: 0 16px;
+    background: #FFF;
+    border: 1px solid #a8a8b3;
+    margin: 5px;
+    text-align: center;
+
+    
+}
+
+.inputName{
     height: 40px;
     border-radius: 8px;
     padding: 0 16px;
     background: #FFF;
     border: 1px solid #a8a8b3;
     width: 200px;
-    margin: 5px;
+    margin: 5px 0px 30px 0px;
     text-align: center;
+    align-self: center;
     
 }
 
@@ -64,14 +80,14 @@
     border: 0;
 }
 
-#separator{
+.separator{
     font-size: 14px;    
     color: #a8a8b3;
     margin: 32px 50px;
     display: none;
     align-items: center;
 }
-#separator::before{
+.separator::before{
     content: '';
     flex: 1;
     height: 1px;
@@ -79,7 +95,7 @@
     margin-right: 16px;
 }
 
-#separator::after{
+.separator::after{
     content: '';
     flex: 1;
     height: 1px;
@@ -96,8 +112,4 @@
 .developer{
     display: flex;
     margin: 15px;
-}
-
-.prosseguir{
-    display: flex;
 }

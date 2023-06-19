@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        
+
+        <link rel="stylesheet" href="../css/register.css">
+        <title>Treinamento</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="cpfValidator">
+                <div class="header">
+                    <h3>Continue com o cadastro</h3>
+                </div>
+                <div class="body">
+                    <input class="inputName" type="text" id="name" placeholder="Nome Completo" maxlength="14"/>
+                    <span>Selecione as linguagens em que você possui conhecimento?</span>
+                    <div class="languageKnowledge">
+                        <p>Javascript</p>
+                        <input id="javascript" type="checkbox" name="javascript" value="false" onclick="handleInputLanguage(event.target)"/>
+                        <p>Python</p>
+                        <input id="python" type="checkbox" name="python" value="false" onclick="handleInputLanguage(event.target)"/>
+                        <p>Java</p>
+                        <input id="java" type="checkbox" name="java" value="false" onclick="handleInputLanguage(event.target)"/>
+                    </div>
+                    <button id="btnRegister" href="#" onclick="register()">Concluir</button>
+                </div>
+                
+                <div class="footer  ">
+                    <div class="separator"> Resultado </div>
+                    <span class="resultado"></span>
+
+                </div>
+            </div>
+            <div class="developer">
+                <p>Desenvolved by Arthur Sapore.</p>
+            </div>
+        </div>
+        <script src="../js/register.js"></script>
+    </body>
+</html>

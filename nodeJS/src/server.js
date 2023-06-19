@@ -1,9 +1,16 @@
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const programmer = require('./database/tables/programmer');
 
 const app = express();
 const port = 5000;
+const corsOptions = {
+    origin: 'http://127.0.0.1:5500',
+    methor: 'POST'
+};
+  
+app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 
