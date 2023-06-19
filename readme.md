@@ -1,1 +1,3 @@
-DOCUMENTAÇÃO PARA TESTAR OS ENDPOINTS: https://documenter.getpostman.com/view/26981651/2s93sgYB8p
+DOCUMENTAÇÃO PARA TESTAR OS ENDPOINTS APLICAÇÃO NODE JS: https://documenter.getpostman.com/view/26981651/2s93sgYB8p
+
+DOCUMENTAÇÃO PARA TESTAR OS ENDPOINTS APLICAÇÃO VALIDADOR DE CPF: https://documenter.getpostman.com/view/26981651/2s93shzUw2
